@@ -1,0 +1,11 @@
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\bin\Debug\netcoreapp3.1\GameefanOS.exe
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\bin\Debug\netcoreapp3.1\GameefanOS.deps.json
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\bin\Debug\netcoreapp3.1\GameefanOS.runtimeconfig.json
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\bin\Debug\netcoreapp3.1\GameefanOS.runtimeconfig.dev.json
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\bin\Debug\netcoreapp3.1\GameefanOS.dll
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\bin\Debug\netcoreapp3.1\GameefanOS.pdb
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\obj\Debug\netcoreapp3.1\GameefanOS.csprojAssemblyReference.cache
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\obj\Debug\netcoreapp3.1\GameefanOS.AssemblyInfoInputs.cache
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\obj\Debug\netcoreapp3.1\GameefanOS.AssemblyInfo.cs
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\obj\Debug\netcoreapp3.1\GameefanOS.dll
+G:\Gameefan\Projekty VS\VS\GameefanOS\GameefanOS\obj\Debug\netcoreapp3.1\GameefanOS.pdb
