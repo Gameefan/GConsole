@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Gameefan\\Projekty VS\\VS\\GameefanOS\\GameefanOS\\GameefanOS.csproj",
+      "projectUniqueName": "G:\\GIT Repos\\GConsole\\GameefanOS\\GameefanOS.csproj",
       "projectName": "GameefanOS",
-      "projectPath": "G:\\Gameefan\\Projekty VS\\VS\\GameefanOS\\GameefanOS\\GameefanOS.csproj",
+      "projectPath": "G:\\GIT Repos\\GConsole\\GameefanOS\\GameefanOS.csproj",
       "packagesPath": "C:\\Users\\Gameefan\\.nuget\\packages\\",
-      "outputPath": "G:\\Gameefan\\Projekty VS\\VS\\GameefanOS\\GameefanOS\\obj\\",
+      "outputPath": "G:\\GIT Repos\\GConsole\\GameefanOS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
