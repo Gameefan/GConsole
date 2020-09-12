@@ -64,6 +64,7 @@ namespace GameefanOS
 			commands.Add("debug", new DebugCommand());
 			commands.Add("sudo", new SudoCommand());
 			commands.Add("su", new SuCommand());
+			commands.Add("sysinfo", new SysInfoCommand());
 		}
 	}
 }
