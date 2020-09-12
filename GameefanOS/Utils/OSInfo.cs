@@ -8,6 +8,6 @@ namespace GameefanOS.Utils
 	{
 		public const string OS_CREATOR = "Gameefan";
 		public const string MAIN_APP_DEV = "Gameefan";
-		public const string OS_VERSION = "v0.1.0-alpha.3";
+		public const string OS_VERSION = "v0.1.0-beta.2.0.1"
 	}
 }
