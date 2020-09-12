@@ -127,9 +127,16 @@ namespace GameefanOS.Utils.FileSystem
 				currentDirectory.Reverse();
 				return true;
 			}
-			if (str == "/")
+			if (str == "/"|| str == "~")
 			{
 				currentDirectory.Clear();
+				return true;
+			}
+			if (str == "@home")
+			{
+				currentDirectory.Clear();
+				currentDirectory.Add("home");
+				currentDirectory.Add(User.FetchUserID(User.currentUser).name.ToLower());
 				return true;
 			}
 			foreach (File file in files)

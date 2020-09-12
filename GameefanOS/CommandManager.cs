@@ -17,6 +17,8 @@ namespace GameefanOS
 
 		public static bool debugEnabled = false;
 
+		public static string currentCommand = "";
+
 		public static bool FetchCommand(string cmd, User user)
 		{
 			string[] args = cmd.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -24,7 +26,9 @@ namespace GameefanOS
 				return false;
 			if(commands.ContainsKey(args[0].ToLower()))
 			{
+				currentCommand = args[0].ToLower();
 				commands[args[0].ToLower()].Execute(args, user);
+				currentCommand = "";
 				return true;
 			}else
 			{

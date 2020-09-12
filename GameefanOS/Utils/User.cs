@@ -28,10 +28,10 @@ namespace GameefanOS.Utils
 		{
 			users.Add(user);
 			allUsers.Add(user);
-			FSManager.ChangeDirectory("/");
-			FSManager.ChangeDirectory("home");
+			FSManager.ChangeDirectory("@home");
+			FSManager.ChangeDirectory("..");
 			FSManager.AddFolder(user.name, user);
-			FSManager.ChangeDirectory(user.name);
+			FSManager.ChangeDirectory("@home");
 		}
 
 		public static SystemGroups GetGroupNameFromGID(int id)
@@ -98,7 +98,7 @@ namespace GameefanOS.Utils
 				},
 				name = "temp",
 				userID = 1,
-				passwd = "temp"
+				passwd = "¬" // ×××ßßß×××
 			};
 			rootUser = new User()
 			{
@@ -118,7 +118,7 @@ namespace GameefanOS.Utils
 				},
 				name = "root",
 				userID = 0,
-				passwd = "root"
+				passwd = "¬"
 			};
 
 			

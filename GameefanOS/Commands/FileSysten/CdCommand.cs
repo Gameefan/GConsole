@@ -13,6 +13,29 @@ namespace GameefanOS.Commands.FileSysten
 				Output.WriteError("Invalid arguments!\n");
 				return;
 			}
+			switch(args[1])
+			{
+				case "..":
+					if (FSManager.PresentWorkingDirectory() != "~/")
+					{
+						FSManager.ChangeDirectory("..");
+						return;
+					}else
+						return;
+				case "/":
+					FSManager.ChangeDirectory("/");
+					break;
+				default:
+					if (!FSManager.ChangeDirectory(args[1]))
+						return;
+					if(FSManager.CatFile("folder.sys")!=User.currentUser.ToString())
+					{
+						FSManager.ChangeDirectory("..");
+						Output.WriteError("You don't have permission to access this folder!\n");
+					}
+					break;
+			}
+			/*
 			if (args[1] == ".." && FSManager.PresentWorkingDirectory() != "~/")
 			{
 				FSManager.ChangeDirectory("..");
@@ -27,16 +50,16 @@ namespace GameefanOS.Commands.FileSysten
 				FSManager.ChangeDirectory("..");
 				return;
 			}
-			if (undo&&args[1]!="/"/*&&args[1]!=".."*/)
+			if (undo&&args[1]!="/")
 			{
 				FSManager.ChangeDirectory("..");
 				FSManager.ChangeDirectory(args[1]);
-			}
+			}*/
 		}
 
 		public string LongHelpMessage_Author()
 		{
-			return OSInfo.OS_CREATOR;
+			return OSInfo.MAIN_APP_DEV;
 		}
 
 		public string LongHelpMessage_Function()

@@ -1,43 +1,71 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GameefanOS.Utils
 {
 	public static class Output
 	{
-		public static string Write(string s, ConsoleColor color = ConsoleColor.Gray)
+		public static string Write(string s, ConsoleColor color = ConsoleColor.Gray, bool displayPrefix = false)
 		{
-			Console.ForegroundColor = color;
 			string msg = $"{s}";
-			Console.Write(msg);
-			Console.ForegroundColor = ConsoleColor.Gray;
+			if (CommandManager.currentCommand != "" && displayPrefix)
+			{
+				msg = CommandManager.currentCommand + ": " + msg;
+				Console.ForegroundColor = ConsoleColor.Gray;
+				Console.Write($"{CommandManager.currentCommand}: ");
+			}
+			Console.ForegroundColor = color;
+			Console.Write(s);
+			Console.ResetColor();
 			return msg;
 		}
-		public static string WriteWarning(string s, ConsoleColor color = ConsoleColor.Yellow)
+		public static string WriteWarning(string s, ConsoleColor color = ConsoleColor.Yellow, bool displayPrefix = true)
 		{
-			Console.ForegroundColor = color;
 			string msg = $"Warning: {s}";
-			Console.Write(msg);
-			Console.ForegroundColor = ConsoleColor.Gray;
-			return msg;
-		}
-		public static string WriteError(string s, ConsoleColor color = ConsoleColor.Red)
-		{
+			if (CommandManager.currentCommand != "" && displayPrefix)
+			{
+				msg = CommandManager.currentCommand + ": " + msg;
+				Console.ForegroundColor = ConsoleColor.Gray;
+				Console.Write($"{CommandManager.currentCommand}: ");
+			}
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.Write("Warning: ");
 			Console.ForegroundColor = color;
-			string msg = $"Error: {s}";
-			Console.Write(msg);
-			Console.ForegroundColor = ConsoleColor.Gray;
+			Console.Write(s);
+			Console.ResetColor();
 			return msg;
 		}
-		public static string WriteDebug(string s, ConsoleColor color = ConsoleColor.Cyan)
+		public static string WriteError(string s, ConsoleColor color = ConsoleColor.Red, bool displayPrefix = true)
+		{
+			string msg = $"Error: {s}";
+			if (CommandManager.currentCommand != "" && displayPrefix)
+			{
+				msg = CommandManager.currentCommand + ": " + msg;
+				Console.ForegroundColor = ConsoleColor.Gray;
+				Console.Write($"{CommandManager.currentCommand}: ");
+			}
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.Write("Error: ");
+			Console.ForegroundColor = color;
+			Console.Write(s);
+			Console.ResetColor();
+			return msg;
+		}
+		public static string WriteDebug(string s, ConsoleColor color = ConsoleColor.Cyan, bool displayPrefix = true)
 		{
 			if (!CommandManager.debugEnabled)
 				return "";
-			Console.ForegroundColor = color;
 			string msg = $"Debug: {s}";
-			Console.Write(msg);
-			Console.ForegroundColor = ConsoleColor.Gray;
+			if (CommandManager.currentCommand != "" && displayPrefix)
+			{
+				msg = CommandManager.currentCommand + ": " + msg;
+				Console.ForegroundColor = ConsoleColor.Gray;
+				Console.Write($"{CommandManager.currentCommand}: ");
+			}
+			Console.ForegroundColor = ConsoleColor.Cyan;
+			Console.Write("Debug: ");
+			Console.ForegroundColor = color;
+			Console.Write(s);
+			Console.ResetColor();
 			return msg;
 		}
 	}

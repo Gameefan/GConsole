@@ -23,7 +23,7 @@ namespace GameefanOS
 				ow = true,
 				ox = false,
 				owner = 0
-			}, path: $"~/", name: "folder.sys", data:"1000");
+			}, path: $"~/", name: "folder.sys", data:"0");
 			FSManager.AddFolder("test", User.FetchUserID(0));
 			FSManager.AddFolder("home", User.FetchUserID(0));
 			User.AddUser(new User()

@@ -31,7 +31,7 @@ namespace GameefanOS.Commands
 
 		public string LongHelpMessage_Author()
 		{
-			return OSInfo.OS_CREATOR;
+			return OSInfo.MAIN_APP_DEV;
 		}
 
 		public string LongHelpMessage_Function()
